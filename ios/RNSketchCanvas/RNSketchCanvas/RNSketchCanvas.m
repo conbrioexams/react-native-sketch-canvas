@@ -417,7 +417,7 @@
 
 - (UIImage *)scaleImage:(UIImage *)originalImage toSize:(CGSize)size contentMode: (NSString*)mode
 {
-    UIGraphicsBeginImageContextWithOptions(size, NO, 3.0);
+    UIGraphicsBeginImageContextWithOptions(size, NO, 5.0);
     CGRect targetRect = [Utility fillImageWithSize:originalImage.size toSize:size contentMode:mode];
     [originalImage drawInRect:targetRect];
     UIImage* newImage = UIGraphicsGetImageFromCurrentImageContext();
